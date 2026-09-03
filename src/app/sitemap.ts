@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { cars } from "@/data/cars";
 import { siteConfig } from "@/data/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/san-pham", "/ve-chung-toi", "/tin-tuc"];
   return [
