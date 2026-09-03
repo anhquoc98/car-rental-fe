@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root { --background: #ffffff; --foreground: #0f172a; }
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-green: #47802d;
+  --color-brand-green-light: #85a62e;
+  --color-brand-blue: #0758a9;
+  --color-brand-blue-dark: #103667;
+  --color-brand-gold: #e6b21a;
+  --color-brand-gold-light: #f3d36a;
+  --font-sans: var(--font-be-vietnam-pro);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-be-vietnam-pro), Arial, sans-serif; }
+a { text-underline-offset: 4px; }
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .section-space { @apply py-16 sm:py-24; }
+  .section-heading { @apply mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between; }
+  .eyebrow { @apply mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-brand-green; }
+  .heading-1 { @apply text-4xl font-bold tracking-tight text-brand-blue-dark sm:text-5xl; }
+  .heading-2 { @apply text-3xl font-bold tracking-tight text-brand-blue-dark sm:text-4xl; }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center rounded-lg bg-brand-gold px-6 font-semibold text-brand-blue-dark transition hover:bg-brand-gold-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-gold; }
+  .button-secondary-dark { @apply inline-flex min-h-12 items-center justify-center rounded-lg border border-brand-gold-light px-6 font-semibold text-white transition hover:bg-white/10; }
+  .text-link { @apply font-semibold text-brand-blue-dark hover:text-brand-green hover:underline; }
+  .card-grid { @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3; }
+  .page-hero { @apply border-b border-brand-green-light/30 bg-brand-green-light/10 py-16 sm:py-20; }
+  .skip-link { @apply fixed left-4 top-4 z-50 -translate-y-24 rounded bg-white px-4 py-3 font-semibold text-brand-blue-dark shadow-lg focus:translate-y-0; }
+}
